@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CocaCola Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="img/logo.png" class="logo" alt="logo" /></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Taste the Feeling</h2>
+          <p>
+            Coca-Cola is a well-known soft drink that has been manufactured by The Coca-Cola Company since 1892. It was first served
+            in 1886 by pharmacist John Pemberton at a soda fountain in Atlanta, Georgia, and has since become a global symbol of
+            American tastes, available in more than 200 countries.
+            
+            The company has a long history of innovation and sustainability efforts. It has been refreshing the world and making a
+            difference for over 138 years, with a purpose to improve people's lives and positively impact communities and the
+            planet.
+            
+            Coca-Cola has faced criticism for its marketing practices and the health impacts of its products. A recent book, "Sweet
+            and Deadly," details how the company worked for decades to discredit the science linking sugary sodas to chronic
+            diseases through aggressive public relations campaigns.
+            
+            In recent news, Coca-Cola has been involved in various initiatives, including a trial of fossil-free plastic in
+            collaboration with Swansea University to reduce its carbon footprint.
+            The company also continues to innovate, expanding its footprint in the Alcohol Ready-to-Drink (aRTD) category with new
+            product launches and exploring new ways to engage consumers through marketing.
+            
+            Coca-Cola's products were recalled in Europe due to elevated chlorate levels, and the company has been involved in
+            sustainability projects and collaborations with artists and designers to create new expressions of creativity and
+            cultural connections
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <!-- Swiper -->
+        <div class="imgBox">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/cocacola1.png"></div>
+              <div class="swiper-slide"><img src="img/cocacola2.png"></div>
+              <div class="swiper-slide"><img src="img/cocacola3.png"></div>
+              <div class="swiper-slide"><img src="img/cocacola4.png"></div>
+              <div class="swiper-slide"><img src="img/cocacola5.png"></div>
+              <div class="swiper-slide"><img src="img/cocacola6.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="social">
+        <li>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-f.png" alt="facebook"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="twitter"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png" alt="instagram"/></a>
+        </li>
+      </ul>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop : true,
+      });
+
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+      }
+    </script>
+
+  </body>
+</html>
